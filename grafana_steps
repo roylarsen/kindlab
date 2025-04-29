@@ -1,0 +1,40 @@
+make create-wsl
+kubectl cluster-info --context kind-kind
+kubectl get all -A
+ls
+touch grafana.yaml
+vim grafana.yaml
+cat ../hello-keda/deploy.yaml
+ls
+vim grafana.yaml
+cat config/wsl2-config.yml
+kubectl create ns grafana
+cat grafana.yaml
+kubectl apply -f grafana.yaml
+kubectl get all -A
+kubectl describe pod grafana-566494879c-qt6zd -n grafana
+kubectl describe pod grafana-566494879c-qt6zd
+vim grafana.yaml
+kubectl get all -A
+kubectl delete -f grafana.yaml
+kubectl apply -f grafana.yaml --namespace grafana
+kubectl get all -A
+kubectl describe pods grafana-566494879c-45jcv -n grafana
+vim grafana.yaml
+kubectl apply -f grafana.yaml --namespace grafana
+kubectl get all -A
+kind load docker-image grafana --name kind-cluster-name
+docker pull grafana
+vim grafana.yaml
+docker pull grafana/grafana:latest
+kind load docker-image grafana/grafana:latest --name kind-cluster-name
+kind -h
+kind get clusters
+kind get clusters kins
+kind get clusters kind
+kind load docker-image grafana/grafana:latest --name kind
+kubectl get all -A
+kubectl describe deploy grafana -n grafana
+kubectl describe svc grafana -n grafana
+kubectl port-forward svc/grafana 8080:3000
+kubectl port-forward svc/grafana 8080:3000 -n grafana
